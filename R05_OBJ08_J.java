@@ -4,8 +4,8 @@ class Coordinates {
     private int x;
     private int y;
    
-    public class Point {
-      public void getPoint() {
+    private class Point {
+      private void getPoint() {
         System.out.println("(" + x + "," + y + ")");
       }
     }
@@ -14,7 +14,7 @@ class Coordinates {
   class AnotherClass {
     public static void main(String[] args) {
       Coordinates c = new Coordinates();
-      Coordinates.Point p = c.new Point();
+      Coordinates.Point p = c.new Point();    // Fails to compile
       p.getPoint();
     }
   }
